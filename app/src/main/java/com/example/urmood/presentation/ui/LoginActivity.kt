@@ -17,6 +17,13 @@ class LoginActivity : AppCompatActivity() {
         binding.btRegister.setOnClickListener {
             val intent = Intent(this@LoginActivity,RegisterActivity::class.java)
             startActivity(intent)
+            finish()
+        }
+
+        binding.btLogin.setOnClickListener {
+            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
         }
         supportActionBar?.hide()
     }
