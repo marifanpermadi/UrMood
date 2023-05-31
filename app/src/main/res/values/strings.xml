@@ -20,4 +20,7 @@
     <string name="join_now">Join now and experience a journey to tranquility with us</string>
     <string name="name">Name</string>
     <string name="enter_your_name">Enter your name</string>
+    <string name="welcome_to_urmood">Welcome to UrMood</string>
+    <string name="feeling">Feeling overwhelmed? Let UrMood become your stress-busting companion.</string>
+    <string name="get_started">Get Started</string>
 </resources>
