@@ -10,7 +10,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="enter_your_password">Enter your password</string>
-    <string name="welcome_back">Welcome back!</string>
+    <string name="welcome_back">Welcome!</string>
     <string name="login_and_discover">Login and discover your stress-free potential</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="register">Register</string>
@@ -22,7 +22,17 @@
     <string name="enter_your_name">Enter your name</string>
     <string name="welcome_to_urmood">Welcome to UrMood</string>
     <string name="feeling">Feeling overwhelmed? Let UrMood become your stress-busting companion.</string>
+    <string name="stress_forecast">Your personal stress forecast is just a tap away</string>
     <string name="get_started">Get Started</string>
     <string name="about_app">About App</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.</string>
+    <string name="line_logo">Line logo</string>
+    <string name="welcome_image">Welcome image</string>
+    <string name="continued">Continue</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
 </resources>

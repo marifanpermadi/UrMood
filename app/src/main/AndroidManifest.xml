@@ -6,16 +6,30 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/urmood"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.UrMood"
         tools:targetApi="31">
         <activity
             android:name=".presentation.ui.AboutAppActivity"
+            android:name=".presentation.ui.HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".presentation.ui.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.ui.OnboardingActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".presentation.ui.OnboardingActivity"
             android:exported="false"
@@ -33,13 +47,7 @@
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".presentation.ui.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>
