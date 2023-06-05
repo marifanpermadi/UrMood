@@ -1,4 +1,4 @@
-package com.example.urmood.presentation.ui.history
+package com.example.urmood.presentation.ui.ui.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.urmood.databinding.FragmentHistoryBinding
 
-class HistoryFragment : Fragment() {
+class DashboardFragment : Fragment() {
 
     private var _binding: FragmentHistoryBinding? = null
 
@@ -22,14 +22,14 @@ class HistoryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val historyViewModel =
-            ViewModelProvider(this)[HistoryViewModel::class.java]
+        val dashboardViewModel =
+            ViewModelProvider(this)[DashboardViewModel::class.java]
 
         _binding = FragmentHistoryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
-        historyViewModel.text.observe(viewLifecycleOwner) {
+        dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
