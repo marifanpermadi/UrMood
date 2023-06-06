@@ -35,4 +35,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="history">History</string>
     <string name="profile">Profile</string>
+    <string name="been_overwhelmed">Been overwhelmed and stressed out lately?</string>
+    <string name="urmood_is_here">UrMood is here to help you find your inner calm.</string>
+    <string name="test_now">Test Now</string>
+    <string name="sorry">Sorry, there is no checking history yet</string>
 </resources>
