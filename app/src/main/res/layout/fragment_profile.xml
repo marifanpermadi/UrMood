@@ -35,13 +35,14 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="57dp"
-        tools:src="@tools:sample/avatars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView"
         app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
+        tools:ignore="ImageContrastCheck"
+        tools:src="@tools:sample/avatars" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
