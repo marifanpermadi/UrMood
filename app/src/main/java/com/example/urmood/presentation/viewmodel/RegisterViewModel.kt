@@ -4,33 +4,41 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.urmood.data.api.ApiConfig
-import com.example.urmood.presentation.utils.Result
+import com.example.urmood.data.model.RegisterModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class RegisterViewModel: ViewModel() {
-    private val _register = MutableLiveData<Result<RegisterResponse>>()
-    val register: LiveData<Result<RegisterResponse>> = _register
+
+    private val _register = MutableLiveData<RegisterModel>()
+    val register: LiveData<RegisterModel> = _register
+
+    private val _error = MutableLiveData<String>()
+    val error: LiveData<String> = _error
 
     fun register(fullname: String, email: String, password: String) {
-        val client = ApiConfig.getApiService().register(fullname, email, password)
-        client.enqueue(object : Callback<RegisterResponse> {
+        val registerModel = RegisterModel(fullname, email, password)
+        val call: Call<RegisterModel?>? = ApiConfig.getApiService().register(registerModel)
+        call!!.enqueue(object : Callback<RegisterModel?> {
+
             override fun onResponse(
-                call: Call<RegisterResponse>,
-                response: Response<RegisterResponse>
+                call: Call<RegisterModel?>,
+                response: Response<RegisterModel?>
             ) {
                 if (response.isSuccessful) {
-                    _register.value = Result.Success(response.body()!!)
+                    val responseBody: RegisterModel? = response.body()
+                    responseBody?.let {
+                        _register.value = it
+                    }
                 } else {
-                    _register.value = Result.Failure(response.message().toString())
+                    _error.value = "Registration failed"
                 }
             }
 
-            override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                _register.value = Result.Failure(t.message)
+            override fun onFailure(call: Call<RegisterModel?>, t: Throwable) {
+                _error.value = t.message
             }
         })
     }
-
 }
