@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.example.urmood.presentation.utils.Result
 import androidx.lifecycle.ViewModelProvider
 import com.example.urmood.R
 import com.example.urmood.databinding.ActivityRegisterBinding
@@ -49,31 +48,29 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun register() {
         binding.apply {
-            val name = etName.text.toString()
+            val fullname = etName.text.toString()
             val email = etEmail.text.toString()
             val password = etPassword.text.toString()
 
-            viewModel.register(name, email, password)
+            viewModel.register(fullname, email, password)
             showLoading(true)
+
             viewModel.register.observe(this@RegisterActivity) {
                 showLoading(false)
-                when (it) {
-                    is Result.Success -> {
-                        Toast.makeText(
-                            this@RegisterActivity,
-                            getString(R.string.register_succeed),
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    }
-                    is Result.Failure -> {
-                        Toast.makeText(
-                            this@RegisterActivity, it.message.toString(), Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                }
+                Toast.makeText(
+                    this@RegisterActivity,
+                    getString(R.string.register_succeed),
+                    Toast.LENGTH_LONG
+                ).show()
+
+                val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+            viewModel.error.observe(this@RegisterActivity) {
+                showLoading(false)
+                Toast.makeText(this@RegisterActivity, getString(R.string.register_fail), Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -4,6 +4,7 @@
     <string name="invalid_email">Email is invalid</string>
     <string name="login_success">Logged in</string>
     <string name="login_fail">Log in failed</string>
+    <string name="register_fail">Register failed</string>
     <string name="register_succeed">Register succeed, please Log in to your account to continue</string>
     <string name="field_can_not_be_empty">This field can not be empty</string>
     <string name="login">Login</string>
@@ -43,4 +44,20 @@
     <string name="test_now">Test Now</string>
     <string name="sorry">Sorry, there is no checking history yet</string>
     <string name="background">Background</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_0">0</string>
+    <string name="question_1">In the past month, how often have you felt disappointed because something happened unexpectedly?</string>
+    <string name="question_2">In the past month, how often have you felt like you weren\'t able to control the important things in your life?</string>
+    <string name="question_3">In the past month, how often have you felt restless and stressed?</string>
+    <string name="question_4">In the past month, how often have you felt confident in your ability to handle your personal problems?</string>
+    <string name="question_5">In the past month, how often have you felt like things were going your way?</string>
+    <string name="question_6">In the last month, how often have you found that you could not cope with all the things that you had to do?</string>
+    <string name="question_7">In the past month, how often have you been able to control distractions in your life?</string>
+    <string name="question_8">In the last month, how often have you felt good about everything you did?</string>
+    <string name="question_9">In the past month, how often have you been angry because something happened that was out of your control?</string>
+    <string name="question_10">In the past month, how often have you had so many difficulties that you couldn\'t handle them?</string>
+    <string name="type_here">Type here</string>
 </resources>
