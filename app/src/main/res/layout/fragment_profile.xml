@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue_light"
     tools:context=".presentation.ui.ui.notifications.NotificationsFragment">
 
     <ImageView
@@ -21,28 +22,101 @@
         android:id="@+id/materialTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/pjs_extrabold"
         android:text="@string/profile"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ivLogo"
         app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivAvatar"
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginTop="57dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView"
-        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
-        app:strokeColor="@color/white"
-        app:strokeWidth="1dp"
-        tools:ignore="ImageContrastCheck"
-        tools:src="@tools:sample/avatars" />
+        android:src="@drawable/deafult_profile"
+        tools:ignore="ImageContrastCheck"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pjs_extrabold"
+        android:text="@string/name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/blue_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="180dp"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        android:text="@string/email"
+        android:fontFamily="@font/pjs_regular"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_email"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        app:cardCornerRadius="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_about"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/about_app"
+            android:textSize="20sp"
+            android:fontFamily="@font/pjs_semibold"
+            android:layout_marginTop="50dp"
+            android:drawableStart="@drawable/baseline_info_24"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/blue_light"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/log_out"
+            android:textSize="20sp"
+            android:fontFamily="@font/pjs_semibold"
+            android:drawableStart="@drawable/baseline_logout_24"
+            android:drawablePadding="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:drawableTint="@color/blue_light"/>
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

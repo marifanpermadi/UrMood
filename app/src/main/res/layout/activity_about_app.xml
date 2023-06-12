@@ -27,7 +27,8 @@
         android:src="@drawable/urmood"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView"
+        android:contentDescription="@string/app_logo"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvAbout"
@@ -41,7 +42,7 @@
         android:fontFamily="@font/pjs_regular"
         android:paddingHorizontal="10dp"
         android:paddingVertical="20dp"
-        android:text="@string/lorem"
+        android:text="@string/about_app"
         android:textSize="14sp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
