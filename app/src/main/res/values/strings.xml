@@ -2,8 +2,10 @@
     <string name="app_name">UrMood</string>
     <string name="invalid_password">Password must be at least 8 characters</string>
     <string name="invalid_email">Email is invalid</string>
-    <string name="login_success">Logged in</string>
+    <string name="login_success">Logged in successfully</string>
+    <string name="logout_success">Logged out successfully</string>
     <string name="login_fail">Log in failed</string>
+    <string name="fail_fetching_user_data">Failed to fetch user data</string>
     <string name="register_fail">Register failed</string>
     <string name="register_succeed">Register succeed, please Log in to your account to continue</string>
     <string name="field_can_not_be_empty">This field can not be empty</string>
@@ -29,7 +31,6 @@
     <string name="stress_forecast">Your personal stress forecast is just a tap away</string>
     <string name="get_started">Get Started</string>
     <string name="about_app">About App</string>
-    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.</string>
     <string name="line_logo">Line logo</string>
     <string name="welcome_image">Welcome image</string>
     <string name="continued">Continue</string>
@@ -60,4 +61,5 @@
     <string name="question_9">In the past month, how often have you been angry because something happened that was out of your control?</string>
     <string name="question_10">In the past month, how often have you had so many difficulties that you couldn\'t handle them?</string>
     <string name="type_here">Type here</string>
+    <string name="log_out">Log out</string>
 </resources>

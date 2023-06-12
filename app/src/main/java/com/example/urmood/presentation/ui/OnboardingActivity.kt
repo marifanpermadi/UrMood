@@ -18,6 +18,7 @@ class OnboardingActivity : AppCompatActivity() {
         binding.btnStarted.setOnClickListener {
             val intent = Intent(this@OnboardingActivity, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

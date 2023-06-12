@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.urmood.data.api.ApiConfig
 import com.example.urmood.data.model.LoginModel
+import com.example.urmood.data.model.UserSession
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,6 +30,9 @@ class LoginViewModel: ViewModel() {
                     val responseBody: LoginModel? = response.body()
                     responseBody?.let {
                         _login.value = it
+                        //_email.value = email
+                        UserSession.loggedInUserEmail = email
+                        UserSession.isLoggedIn = true
                     }
                 } else {
                     _error.value = "Login failed"
