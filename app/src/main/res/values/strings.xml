@@ -62,4 +62,7 @@
     <string name="question_10">In the past month, how often have you had so many difficulties that you couldn\'t handle them?</string>
     <string name="type_here">Type here</string>
     <string name="log_out">Log out</string>
+    <string name="daily_motivation">DAILY MOTIVATION</string>
+    <string name="eat_much_so_not_easy_stress">Eat much so not easy stress...</string>
+    <string name="mental_health_article">Mental Health Article</string>
 </resources>

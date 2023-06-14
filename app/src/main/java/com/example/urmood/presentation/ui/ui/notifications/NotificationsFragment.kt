@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.urmood.R
-import com.example.urmood.data.model.UserSession
+import com.example.urmood.presentation.ui.ui.model.UserSession
 import com.example.urmood.databinding.FragmentProfileBinding
 import com.example.urmood.presentation.ui.AboutAppActivity
 import com.example.urmood.presentation.ui.LoginActivity

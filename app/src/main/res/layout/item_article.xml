@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="3dp"
+    app:cardElevation="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="12dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivArticle"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp"
+            android:src="@drawable/breaking_news" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvArticleTitle"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/pjs_semibold"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@+id/ivArticle"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Article Title" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvArticleBody"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/pjs_regular"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvArticleTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvArticleTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvArticleTitle"
+            tools:text="Article body" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
