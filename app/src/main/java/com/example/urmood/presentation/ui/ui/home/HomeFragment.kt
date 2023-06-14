@@ -2,6 +2,7 @@ package com.example.urmood.presentation.ui.ui.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.urmood.R
 import com.example.urmood.databinding.FragmentHomeBinding
 import com.example.urmood.presentation.ui.TestActivity
+import com.example.urmood.presentation.ui.WebviewActivity
 import com.example.urmood.presentation.ui.ui.ListArticleAdapter
 import com.example.urmood.presentation.ui.ui.model.ArticleResponse
 import com.example.urmood.presentation.ui.ui.model.TipsResponse
@@ -55,7 +57,7 @@ class HomeFragment : Fragment() {
             setTips(it)
         }
         binding.btnTest.setOnClickListener {
-            Toast.makeText(requireContext(), binding.tvMotivation.text, Toast.LENGTH_SHORT).show()
+           //TODO INTEGRATE API TEST
         }
     }
 
@@ -71,6 +73,15 @@ class HomeFragment : Fragment() {
     private fun setArticle(article : List<ArticleResponse>){
         val adapter = ListArticleAdapter(article)
         binding.rvArticle.adapter = adapter
+        adapter.setOnItemClickCallback(object :
+            ListArticleAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: ArticleResponse?) {
+                val bundle = Bundle()
+                bundle.putString("link", data?.link)
+                startActivity(Intent(requireActivity(), WebviewActivity::class.java).putExtra(
+                    "link", data?.link))
+            }
+        })
     }
 
     private fun showLoading(isLoading: Boolean) {

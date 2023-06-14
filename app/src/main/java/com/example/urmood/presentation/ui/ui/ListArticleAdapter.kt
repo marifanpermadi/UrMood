@@ -9,6 +9,15 @@ import com.example.urmood.R
 import com.example.urmood.presentation.ui.ui.model.ArticleResponse
 
 class ListArticleAdapter(private val listArticle: List<ArticleResponse?>?) : RecyclerView.Adapter<ListArticleAdapter.ViewHolder>() {
+    private lateinit var onItemClickCallback : OnItemClickCallback
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: ArticleResponse?)
+    }
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     class ViewHolder (itemview : View) : RecyclerView.ViewHolder(itemview) {
         var tvTitle : TextView = itemView.findViewById(R.id.tvArticleTitle)
         var tvBody : TextView = itemView.findViewById(R.id.tvArticleBody)
@@ -24,5 +33,8 @@ class ListArticleAdapter(private val listArticle: List<ArticleResponse?>?) : Rec
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvBody.text = listArticle!![position]!!.body
         holder.tvTitle.text = listArticle[position]!!.title
+        holder.itemView.setOnClickListener{
+            onItemClickCallback.onItemClicked(listArticle[holder.adapterPosition])
+        }
     }
 }
