@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.urmood.R
-import com.example.urmood.presentation.ui.ui.model.ArticleResponseItem
+import com.example.urmood.presentation.ui.ui.model.ArticleResponse
 
-class ListArticleAdapter(private val listArticle: List<ArticleResponseItem?>?) : RecyclerView.Adapter<ListArticleAdapter.ViewHolder>() {
+class ListArticleAdapter(private val listArticle: List<ArticleResponse?>?) : RecyclerView.Adapter<ListArticleAdapter.ViewHolder>() {
     class ViewHolder (itemview : View) : RecyclerView.ViewHolder(itemview) {
         var tvTitle : TextView = itemView.findViewById(R.id.tvArticleTitle)
         var tvBody : TextView = itemView.findViewById(R.id.tvArticleBody)

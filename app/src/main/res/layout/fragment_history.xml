@@ -50,6 +50,7 @@
         android:layout_marginTop="21dp"
         android:backgroundTint="@color/blue"
         android:text="@string/test_now"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSorry" />

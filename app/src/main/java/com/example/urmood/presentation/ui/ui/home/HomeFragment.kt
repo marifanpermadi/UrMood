@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.urmood.R
 import com.example.urmood.databinding.FragmentHomeBinding
 import com.example.urmood.presentation.ui.TestActivity
 import com.example.urmood.presentation.ui.ui.ListArticleAdapter
@@ -43,14 +44,15 @@ class HomeFragment : Fragment() {
         binding.rvArticle.layoutManager = layoutManager
         val itemDecoration = DividerItemDecoration(requireContext(),layoutManager.orientation)
         binding.rvArticle.addItemDecoration(itemDecoration)
-        homeViewModel.listTips.observe(viewLifecycleOwner){
-            setTips(it)
+
+        homeViewModel.isLoading.observe(viewLifecycleOwner){
+            showLoading(it)
         }
         homeViewModel.listArticle.observe(viewLifecycleOwner){
             setArticle(it)
         }
-        homeViewModel.isLoading.observe(viewLifecycleOwner){
-            showLoading(it)
+        homeViewModel.listTips.observe(viewLifecycleOwner){
+            setTips(it)
         }
         binding.btnTest.setOnClickListener {
             Toast.makeText(requireContext(), binding.tvMotivation.text, Toast.LENGTH_SHORT).show()
@@ -62,12 +64,12 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-    private fun setTips(tips : TipsResponse){
-        binding.tvMotivation.text = tips.tipsResponse!!.first()!!.tips
+    private fun setTips(tips : List<TipsResponse>){
+        binding.tvMotivation.text = tips.first().tips
     }
 
-    private fun setArticle(article : ArticleResponse){
-        val adapter = ListArticleAdapter(article.articleResponse)
+    private fun setArticle(article : List<ArticleResponse>){
+        val adapter = ListArticleAdapter(article)
         binding.rvArticle.adapter = adapter
     }
 

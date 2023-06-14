@@ -1,10 +1,8 @@
 package com.example.urmood.data.api
 
-import com.example.urmood.presentation.ui.ui.model.ArticleResponse
 import com.example.urmood.presentation.ui.ui.model.LoginModel
 import com.example.urmood.presentation.ui.ui.model.LogoutResponse
 import com.example.urmood.presentation.ui.ui.model.RegisterModel
-import com.example.urmood.presentation.ui.ui.model.TipsResponse
 import com.example.urmood.presentation.ui.ui.model.UserResponse
 import retrofit2.Call
 import retrofit2.http.Body
@@ -26,9 +24,4 @@ interface ApiService {
     @POST("logout")
     fun logout(@Query("email") email: String): Call<LogoutResponse>
 
-    @GET("article")
-    fun getAllArticle() : Call<ArticleResponse>
-
-    @GET("alltips")
-    fun getAllTips() : Call<TipsResponse>
 }

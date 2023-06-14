@@ -133,6 +133,7 @@
                 android:layout_marginTop="23dp"
                 android:backgroundTint="@color/blue"
                 android:text="@string/test_now"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView2"
@@ -155,11 +156,13 @@
                 android:id="@+id/rvArticle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/item_article"
-                tools:itemCount="4"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView2"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_article" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

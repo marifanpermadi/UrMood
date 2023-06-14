@@ -4,15 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 data class TipsResponse(
 
-	@field:SerializedName("TipsResponse")
-	val tipsResponse: List<TipsResponseItem?>? = null
-)
-
-data class TipsResponseItem(
-
 	@field:SerializedName("Id")
-	val id: Int? = null,
+	val id: Int,
 
 	@field:SerializedName("tips")
-	val tips: String? = null
+	val tips: String
 )

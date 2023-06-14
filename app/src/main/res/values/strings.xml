@@ -65,4 +65,6 @@
     <string name="daily_motivation">DAILY MOTIVATION</string>
     <string name="eat_much_so_not_easy_stress">Eat much so not easy stress...</string>
     <string name="mental_health_article">Mental Health Article</string>
+    <string name="fail_fetching_article">Failed to fetch article</string>
+    <string name="fail_fetching_tips">Failed to fetch tips</string>
 </resources>
