@@ -20,6 +20,7 @@
                 android:layout_height="wrap_content"
                 android:translationZ="100dp"
                 android:visibility="gone"
+                android:indeterminateTint="@color/blue"
                 app:layout_constraintBottom_toBottomOf="@+id/rvArticle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

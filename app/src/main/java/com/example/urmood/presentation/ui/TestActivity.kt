@@ -1,7 +1,10 @@
 package com.example.urmood.presentation.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import com.example.urmood.databinding.ActivityTestBinding
 import com.example.urmood.ml.Model
@@ -84,10 +87,21 @@ class TestActivity : AppCompatActivity() {
             val predictedStressLevel = if (maxIndex >= 0 && maxIndex < stressLevels.size) {
                 stressLevels[maxIndex]
             } else {
-                "Stress levle is Unknown"
+                "Stress level is Unknown"
             }
 
-            Log.d("TestActivity", "Predicted Stress Level: $predictedStressLevel")
+            val loadingIntent = Intent(this, LoadingActivity::class.java)
+            startActivity(loadingIntent)
+            finish()
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                val intent = Intent(this@TestActivity, TestResultActivity::class.java)
+                intent.putExtra("predictedStressLevel", predictedStressLevel)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                startActivity(intent)
+
+                finish()
+            }, delayTime)
         }
     }
 
@@ -95,13 +109,24 @@ class TestActivity : AppCompatActivity() {
         return when (city) {
             "Bandung" -> 26
             "Malang" -> 17
-            "Jakarta" -> 8
+            "Jakarta" -> 38
             "Yogyakarta" -> 5
             "Klaten" -> 13
             "Banyuwangi" -> 18
             "Bekasi" -> 43
             "Bogor" -> 0
             "Semarang" -> 9
+            "Bali" -> 6
+            /*"Blitar" -> 10
+            "Cimahi" -> 19
+            "Depok" -> 29
+            "Garut" -> 17
+            "Kediri" -> 10
+            "Lamongan" -> 8
+            "Majalengka" -> 11
+            "Tanggerang" -> 11
+            "Tegal" -> 11
+            "Majalengka" -> 11*/
             else -> -1
         }
     }
@@ -113,5 +138,9 @@ class TestActivity : AppCompatActivity() {
             "Not working" -> 43
             else -> -1
         }
+    }
+
+    companion object {
+        const val delayTime: Long = 1000
     }
 }
