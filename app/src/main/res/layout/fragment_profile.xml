@@ -18,17 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/materialTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/pjs_extrabold"
-        android:text="@string/profile"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/ivLogo"
-        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivAvatar"
@@ -37,7 +26,7 @@
         android:layout_marginTop="57dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialTextView"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo"
         android:src="@drawable/deafult_profile"
         tools:ignore="ImageContrastCheck"/>
 

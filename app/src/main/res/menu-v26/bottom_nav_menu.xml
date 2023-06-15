@@ -10,7 +10,7 @@
     <item
         android:id="@+id/navigation_history"
         android:icon="@drawable/baseline_menu_book_24"
-        android:title="@string/history" />
+        android:title="@string/event" />
 
     <item
         android:id="@+id/navigation_profile"

@@ -15,7 +15,7 @@ class ContactListAdapter(
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvName: TextView = itemView.findViewById(R.id.tv_contact_name)
-        val tvNumber: TextView = itemView.findViewById(R.id.tv_contact_number)
+        val tvDesc: TextView = itemView.findViewById(R.id.tv_contact_desc)
         val imgPhoto: ImageView = itemView.findViewById(R.id.iv_contact)
     }
 
@@ -27,10 +27,10 @@ class ContactListAdapter(
     override fun getItemCount(): Int = listContact.size
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, photo, number) = listContact[position]
+        val (name, photo, number, desc) = listContact[position]
         holder.tvName.text = name
         holder.imgPhoto.setImageResource(photo)
-        holder.tvNumber.text = number
+        holder.tvDesc.text = desc
 
 
         holder.itemView.setOnClickListener {
