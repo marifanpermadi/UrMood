@@ -30,6 +30,123 @@
                 android:padding="10dp">
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_questionAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pjs_extrabold"
+                    android:text="@string/how_old"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_answerAge"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:hint="@string/type_here"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_questionAge"
+                    tools:ignore="DuplicateSpeakableTextCheck"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/blue_light"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_questionCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pjs_extrabold"
+                    android:text="@string/what_city"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_answerCity"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:hint="@string/type_here"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_questionCity"
+                tools:ignore="DuplicateSpeakableTextCheck"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/blue_light"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_questionOccupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pjs_extrabold"
+                    android:text="@string/occupation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_answerOccupation"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:hint="@string/type_here"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_questionOccupation"
+                    tools:ignore="DuplicateSpeakableTextCheck"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/blue_light"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tv_question1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -42,7 +159,7 @@
                     android:id="@+id/et_answer1"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:hint="@string/type_here"
+                    android:hint="@string/_0_4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_question1"
                     tools:ignore="DuplicateSpeakableTextCheck" />
@@ -81,7 +198,7 @@
                     android:id="@+id/et_answer2"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:hint="@string/type_here"
+                    android:hint="@string/_0_4"
                     app:layout_constraintTop_toBottomOf="@id/tv_question2"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="DuplicateSpeakableTextCheck"/>
@@ -119,7 +236,7 @@
                     android:id="@+id/et_answer3"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:hint="@string/type_here"
+                    android:hint="@string/_0_4"
                     app:layout_constraintTop_toBottomOf="@id/tv_question3"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="DuplicateSpeakableTextCheck"/>
@@ -157,7 +274,7 @@
                     android:id="@+id/et_answer4"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:hint="@string/type_here"
+                    android:hint="@string/_0_4"
                     app:layout_constraintTop_toBottomOf="@id/tv_question4"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="DuplicateSpeakableTextCheck"/>
@@ -195,7 +312,7 @@
                     android:id="@+id/et_answer5"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:hint="@string/type_here"
+                    android:hint="@string/_0_4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_question5"
                     tools:ignore="DuplicateSpeakableTextCheck" />
@@ -233,7 +350,7 @@
                     android:id="@+id/et_answer6"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:hint="@string/type_here"
+                    android:hint="@string/_0_4"
                     app:layout_constraintTop_toBottomOf="@id/tv_question6"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="DuplicateSpeakableTextCheck"/>
@@ -271,7 +388,7 @@
                     android:id="@+id/et_answer7"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:hint="@string/type_here"
+                    android:hint="@string/_0_4"
                     app:layout_constraintTop_toBottomOf="@id/tv_question7"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="DuplicateSpeakableTextCheck"/>
@@ -309,7 +426,7 @@
                     android:id="@+id/et_answer8"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:hint="@string/type_here"
+                    android:hint="@string/_0_4"
                     app:layout_constraintTop_toBottomOf="@id/tv_question8"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="DuplicateSpeakableTextCheck"/>
@@ -347,7 +464,7 @@
                     android:id="@+id/et_answer9"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:hint="@string/type_here"
+                    android:hint="@string/_0_4"
                     app:layout_constraintTop_toBottomOf="@id/tv_question9"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="DuplicateSpeakableTextCheck"/>
@@ -385,7 +502,7 @@
                     android:id="@+id/et_answer10"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:hint="@string/type_here"
+                    android:hint="@string/_0_4"
                     app:layout_constraintTop_toBottomOf="@id/tv_question10"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="DuplicateSpeakableTextCheck"/>
@@ -393,6 +510,16 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_proceed"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/process"
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
 

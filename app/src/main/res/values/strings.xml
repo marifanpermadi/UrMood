@@ -50,6 +50,10 @@
     <string name="_3">3</string>
     <string name="_4">4</string>
     <string name="_0">0</string>
+    <string name="_0_4">0 – 4</string>
+    <string name="how_old">How old are you?</string>
+    <string name="what_city">What city do you live in?</string>
+    <string name="occupation">What is your occupation?</string>
     <string name="question_1">In the past month, how often have you felt disappointed because something happened unexpectedly?</string>
     <string name="question_2">In the past month, how often have you felt like you weren\'t able to control the important things in your life?</string>
     <string name="question_3">In the past month, how often have you felt restless and stressed?</string>
@@ -62,6 +66,7 @@
     <string name="question_10">In the past month, how often have you had so many difficulties that you couldn\'t handle them?</string>
     <string name="type_here">Type here</string>
     <string name="log_out">Log out</string>
+    <string name="process">Proceed</string>
     <string name="daily_motivation">DAILY MOTIVATION</string>
     <string name="eat_much_so_not_easy_stress">Eat much so not easy stress...</string>
     <string name="mental_health_article">Mental Health Article</string>
