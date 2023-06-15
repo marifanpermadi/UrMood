@@ -57,7 +57,7 @@ class HomeFragment : Fragment() {
             setTips(it)
         }
         binding.btnTest.setOnClickListener {
-           //TODO INTEGRATE API TEST
+            startActivity(Intent(requireActivity(), TestActivity::class.java))
         }
     }
 
