@@ -54,6 +54,7 @@ class HomeFragment : Fragment() {
         homeViewModel.listTips.observe(viewLifecycleOwner){
             setTips(it)
         }
+
     }
 
     override fun onDestroyView() {
