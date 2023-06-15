@@ -68,10 +68,38 @@
     <string name="log_out">Log out</string>
     <string name="process">Proceed</string>
     <string name="daily_motivation">DAILY MOTIVATION</string>
-    <string name="eat_much_so_not_easy_stress">Eat much so not easy stress...</string>
-    <string name="mental_health_article">Mental Health Article</string>
+    <string name="eat_much_so_not_easy_stress">Eat much so not easy stress…</string>
+    <string name="mental_health_article">Get insight from articles below</string>
     <string name="fail_fetching_article">Failed to fetch article</string>
     <string name="fail_fetching_tips">Failed to fetch tips</string>
-    <string name="about_app_description">urMood is an innovative app that combines the power of machine learning, expert articles, practical tips, and engaging events to help you assess, improve, and maintain your mental health. With its user-friendly interface and personalized approach, urMood empowers individuals to take control of their well-being and thrive in todays fast-paced world.
+    <string name="about_app_description">urMood is an innovative app that combines the power of machine learning, expert articles, practical tips, and engaging events to help you assess, improve, and maintain your mental health. With its user-friendly interface and personalized approach, urMood empowers individuals to take control of their well-being and thrive in today\'s fast-paced world.
 With urMood, you have a comprehensive mental health companion that leverages machine learning, expert knowledge, and community support to empower you on your journey to improved mental well-being. Take control of your mental health, access valuable resources, and discover a community that understands and supports you every step of the way.</string>
+    <string name="result">Result</string>
+    <string name="image_result">Image result</string>
+    <string name="heavy_stress">It seems like you are having a heavy stress</string>
+    <string name="med_stress">It seems like you are having a medium stress</string>
+    <string name="light_stress">Congratulation! You seems fine</string>
+    <string name="unknown_stress">Sorry, we are unable to predict your stress level</string>
+    <string name="predicting_your_data">Predicting your data…</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="consult_now_with_our_expert">Get help from our expert:</string>
+    <string name="event">Event</string>
+
+    <string-array name="contact_name">
+        <item>Satu Persen</item>
+        <item>Dr. Iwan S.Psi.</item>
+        <item>Dr. Permadi S.Psi.</item>
+    </string-array>
+
+    <integer-array name="contact_photo">
+        <item>@drawable/satu_persen</item>
+        <item>@drawable/dr_iwan</item>
+        <item>@drawable/dr_permadi</item>
+    </integer-array>
+
+    <string-array name="contact_number">
+        <item>+6285158871220</item>
+        <item>+6285786756504</item>
+        <item>+6281393193531</item>
+    </string-array>
 </resources>

@@ -2,16 +2,13 @@ package com.example.urmood.presentation.ui.ui.home
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.urmood.R
 import com.example.urmood.databinding.FragmentHomeBinding
 import com.example.urmood.presentation.ui.TestActivity
 import com.example.urmood.presentation.ui.WebviewActivity
@@ -46,6 +43,7 @@ class HomeFragment : Fragment() {
         binding.rvArticle.layoutManager = layoutManager
         val itemDecoration = DividerItemDecoration(requireContext(),layoutManager.orientation)
         binding.rvArticle.addItemDecoration(itemDecoration)
+        binding.rvArticle.setHasFixedSize(true)
 
         homeViewModel.isLoading.observe(viewLifecycleOwner){
             showLoading(it)
@@ -56,9 +54,7 @@ class HomeFragment : Fragment() {
         homeViewModel.listTips.observe(viewLifecycleOwner){
             setTips(it)
         }
-        binding.btnTest.setOnClickListener {
-            startActivity(Intent(requireActivity(), TestActivity::class.java))
-        }
+
     }
 
     override fun onDestroyView() {
