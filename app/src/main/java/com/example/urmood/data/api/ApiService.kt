@@ -1,9 +1,9 @@
 package com.example.urmood.data.api
 
-import com.example.urmood.data.model.LoginModel
-import com.example.urmood.data.model.LogoutResponse
-import com.example.urmood.data.model.RegisterModel
-import com.example.urmood.data.model.UserResponse
+import com.example.urmood.presentation.ui.ui.model.LoginModel
+import com.example.urmood.presentation.ui.ui.model.LogoutResponse
+import com.example.urmood.presentation.ui.ui.model.RegisterModel
+import com.example.urmood.presentation.ui.ui.model.UserResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET

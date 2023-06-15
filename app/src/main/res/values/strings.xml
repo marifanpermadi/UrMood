@@ -67,4 +67,11 @@
     <string name="type_here">Type here</string>
     <string name="log_out">Log out</string>
     <string name="process">Proceed</string>
+    <string name="daily_motivation">DAILY MOTIVATION</string>
+    <string name="eat_much_so_not_easy_stress">Eat much so not easy stress...</string>
+    <string name="mental_health_article">Mental Health Article</string>
+    <string name="fail_fetching_article">Failed to fetch article</string>
+    <string name="fail_fetching_tips">Failed to fetch tips</string>
+    <string name="about_app_description">urMood is an innovative app that combines the power of machine learning, expert articles, practical tips, and engaging events to help you assess, improve, and maintain your mental health. With its user-friendly interface and personalized approach, urMood empowers individuals to take control of their well-being and thrive in todays fast-paced world.
+With urMood, you have a comprehensive mental health companion that leverages machine learning, expert knowledge, and community support to empower you on your journey to improved mental well-being. Take control of your mental health, access valuable resources, and discover a community that understands and supports you every step of the way.</string>
 </resources>
