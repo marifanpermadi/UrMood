@@ -39,6 +39,8 @@ class TestResultActivity : AppCompatActivity() {
             }
         }
 
+        supportActionBar?.hide()
+
         binding.rvContact.setHasFixedSize(true)
         list.addAll(getListContact())
         showRecycleList()
@@ -61,11 +63,12 @@ class TestResultActivity : AppCompatActivity() {
         val dataName = resources.getStringArray(R.array.contact_name)
         val dataNumber = resources.getStringArray(R.array.contact_number)
         val dataPhoto = resources.obtainTypedArray(R.array.contact_photo)
+        val dataDesc = resources.getStringArray(R.array.contact_desc)
 
         val listContact = ArrayList<Contact>()
 
         for (i in dataName.indices) {
-            val contact = Contact(dataName[i], dataPhoto.getResourceId(i, -1), dataNumber[i])
+            val contact = Contact(dataName[i], dataPhoto.getResourceId(i, -1), dataNumber[i], dataDesc[i])
             listContact.add(contact)
         }
         return listContact

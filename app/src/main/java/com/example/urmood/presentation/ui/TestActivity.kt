@@ -22,6 +22,8 @@ class TestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         val model = Model.newInstance(this)
 
         binding.btProceed.setOnClickListener {

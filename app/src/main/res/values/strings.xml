@@ -84,6 +84,23 @@ With urMood, you have a comprehensive mental health companion that leverages mac
     <string name="back_to_home">Back to Home</string>
     <string name="consult_now_with_our_expert">Get help from our expert:</string>
     <string name="event">Event</string>
+    <string name="joint_event">Join the upcoming event and be the new You!</string>
+    <string name="web_binar">Web Binar: Meditation Mastery</string>
+    <string name="when">June 8, 19:00 pm WIB</string>
+    <string name="special_guest">Special guest: Dr. Boyke</string>
+    <string name="www_satupersen_com">www.satupersen.com</string>
+    <string name="image">image</string>
+    <string name="community_meet_up_jakarta">Community meet up: Jakarta</string>
+    <string name="june_9_09_00_am_wib">June 9, 09.00 am WIB</string>
+    <string name="rafles_jakarta">Rafles Jakarta</string>
+    <string name="special_guest_aldi_taher">Special guest: Aldi Taher</string>
+    <string name="web_binar_journey_to_tranquility">Web Binar: Journey to tranquility</string>
+    <string name="special_guset_ir_dr_iwan">Special guset: Ir. Dr. Iwan A.MaPd PS.SI</string>
+    <string name="protect_privacy_increase_solidarity">Protect privacy, increase solidarity</string>
+    <string name="urmood_hq_jakarta">UrMood HQ, Jakarta</string>
+    <string name="gelora_bung_soekarno_stadium">Gelora Bung Soekarno Stadium</string>
+    <string name="sign_me_up">Sign up</string>
+    <string name="wa_logo">WA logo</string>
 
     <string-array name="contact_name">
         <item>Satu Persen</item>
@@ -101,5 +118,11 @@ With urMood, you have a comprehensive mental health companion that leverages mac
         <item>+6285158871220</item>
         <item>+6285786756504</item>
         <item>+6281393193531</item>
+    </string-array>
+
+    <string-array name="contact_desc">
+        <item>Professional self-improvement service</item>
+        <item>An expert in his expertise</item>
+        <item>A passionate expert</item>
     </string-array>
 </resources>

@@ -7,5 +7,6 @@ import kotlinx.parcelize.Parcelize
 data class Contact (
     val name: String,
     val photo: Int,
-    val number: String
+    val number: String,
+    val desc: String
 ): Parcelable
