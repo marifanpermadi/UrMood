@@ -13,6 +13,7 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import com.example.urmood.databinding.ActivitySplashBinding
+import com.example.urmood.presentation.ui.ui.model.UserSession
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
@@ -27,11 +28,10 @@ class SplashActivity : AppCompatActivity() {
         setupView()
         playAnimation()
 
+        UserSession.init(applicationContext)
+
         Handler(Looper.getMainLooper()).postDelayed({
-            //TODO("Check logged in user, go to login if no user logged in else go to home activity")
-            val intent = Intent(this@SplashActivity, OnboardingActivity::class.java)
-            startActivity(intent)
-            finish()
+            checkLoggedInUser()
         }, delayTime)
     }
 
@@ -47,6 +47,27 @@ class SplashActivity : AppCompatActivity() {
             start()
         }
     }
+
+    private fun checkLoggedInUser() {
+        if (UserSession.isLoggedIn) {
+            navigateToHomeActivity()
+        } else {
+            navigateToLoginActivity()
+        }
+    }
+
+    private fun navigateToHomeActivity() {
+        val intent = Intent(this@SplashActivity, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navigateToLoginActivity() {
+        val intent = Intent(this@SplashActivity, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
 
     private fun setupView() {
         @Suppress("DEPRECATION") if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {

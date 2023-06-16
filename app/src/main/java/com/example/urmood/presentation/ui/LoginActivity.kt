@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.urmood.R
 import com.example.urmood.databinding.ActivityLoginBinding
 import com.example.urmood.presentation.viewmodel.LoginViewModel
-import com.example.urmood.presentation.viewmodel.RegisterViewModel
 
 class LoginActivity : AppCompatActivity() {
 
