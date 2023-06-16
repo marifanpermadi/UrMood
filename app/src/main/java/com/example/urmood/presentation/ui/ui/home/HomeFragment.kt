@@ -13,8 +13,8 @@ import com.example.urmood.databinding.FragmentHomeBinding
 import com.example.urmood.presentation.ui.TestActivity
 import com.example.urmood.presentation.ui.WebviewActivity
 import com.example.urmood.presentation.utils.ListArticleAdapter
-import com.example.urmood.presentation.ui.ui.model.ArticleResponse
-import com.example.urmood.presentation.ui.ui.model.TipsResponse
+import com.example.urmood.data.model.ArticleResponse
+import com.example.urmood.data.model.TipsResponse
 
 class HomeFragment : Fragment() {
 

@@ -1,4 +1,4 @@
-package com.example.urmood.presentation.ui.ui.model
+package com.example.urmood.data.model
 
 data class LoginModel(
     var email: String,

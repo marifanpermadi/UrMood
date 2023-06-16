@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.urmood.data.api.ApiConfig
-import com.example.urmood.presentation.ui.ui.model.LoginModel
-import com.example.urmood.presentation.ui.ui.model.UserSession
+import com.example.urmood.data.model.LoginModel
+import com.example.urmood.data.model.UserSession
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

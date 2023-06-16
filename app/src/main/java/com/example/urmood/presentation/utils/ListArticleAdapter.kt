@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.urmood.R
-import com.example.urmood.presentation.ui.ui.model.ArticleResponse
+import com.example.urmood.data.model.ArticleResponse
 
 class ListArticleAdapter(private val listArticle: List<ArticleResponse?>?) :
     RecyclerView.Adapter<ListArticleAdapter.ViewHolder>() {

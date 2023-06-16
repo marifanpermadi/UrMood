@@ -1,17 +1,15 @@
-package com.example.urmood.presentation.ui.ui.dashboard
+package com.example.urmood.presentation.ui.ui.event
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.example.urmood.databinding.FragmentHistoryBinding
+import com.example.urmood.databinding.FragmentEventBinding
 
-class DashboardFragment : Fragment() {
+class EventFragment : Fragment() {
 
-    private var _binding: FragmentHistoryBinding? = null
-
+    private var _binding: FragmentEventBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,10 +17,8 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this)[DashboardViewModel::class.java]
 
-        _binding = FragmentHistoryBinding.inflate(inflater, container, false)
+        _binding = FragmentEventBinding.inflate(inflater, container, false)
 
         return binding.root
     }

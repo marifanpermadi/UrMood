@@ -1,18 +1,18 @@
-package com.example.urmood.presentation.ui.ui.notifications
+package com.example.urmood.presentation.ui.ui.profile
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.urmood.data.api.ApiConfig
-import com.example.urmood.presentation.ui.ui.model.LogoutResponse
-import com.example.urmood.presentation.ui.ui.model.User
-import com.example.urmood.presentation.ui.ui.model.UserResponse
-import com.example.urmood.presentation.ui.ui.model.UserSession
+import com.example.urmood.data.model.LogoutResponse
+import com.example.urmood.data.model.User
+import com.example.urmood.data.model.UserResponse
+import com.example.urmood.data.model.UserSession
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class NotificationsViewModel : ViewModel() {
+class ProfileViewModel : ViewModel() {
 
     private val _userData = MutableLiveData<User>()
     val userData: LiveData<User> = _userData
