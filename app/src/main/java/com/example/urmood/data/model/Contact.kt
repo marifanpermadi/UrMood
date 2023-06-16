@@ -1,4 +1,4 @@
-package com.example.urmood.presentation.ui.ui.model
+package com.example.urmood.data.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

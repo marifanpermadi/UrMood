@@ -1,4 +1,4 @@
-package com.example.urmood.presentation.ui.ui.notifications
+package com.example.urmood.presentation.ui.ui.profile
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,12 +9,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.urmood.R
-import com.example.urmood.presentation.ui.ui.model.UserSession
+import com.example.urmood.data.model.UserSession
 import com.example.urmood.databinding.FragmentProfileBinding
 import com.example.urmood.presentation.ui.AboutAppActivity
 import com.example.urmood.presentation.ui.LoginActivity
 
-class NotificationsFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
@@ -43,19 +43,19 @@ class NotificationsFragment : Fragment() {
     }
 
     private fun getUserData() {
-        val notificationsViewModel = ViewModelProvider(this)[NotificationsViewModel::class.java]
+        val profileViewModel = ViewModelProvider(this)[ProfileViewModel::class.java]
         val email = UserSession.loggedInUserEmail
 
-        notificationsViewModel.getUserData(email)
+        profileViewModel.getUserData(email)
         showLoading(true)
 
-        notificationsViewModel.userData.observe(viewLifecycleOwner) { userData ->
+        profileViewModel.userData.observe(viewLifecycleOwner) { userData ->
             showLoading(false)
             binding.tvName.text = userData.fullname
             binding.tvEmail.text = userData.email
         }
 
-        notificationsViewModel.error.observe(viewLifecycleOwner) {
+        profileViewModel.error.observe(viewLifecycleOwner) {
             showLoading(false)
             Toast.makeText(
                 requireContext(),
@@ -66,13 +66,13 @@ class NotificationsFragment : Fragment() {
     }
 
     private fun logout() {
-        val notificationsViewModel = ViewModelProvider(this)[NotificationsViewModel::class.java]
+        val profileViewModel = ViewModelProvider(this)[ProfileViewModel::class.java]
         val email = UserSession.loggedInUserEmail
 
-        notificationsViewModel.logout(email)
+        profileViewModel.logout(email)
         showLoading(true)
 
-        notificationsViewModel.logout.observe(viewLifecycleOwner) {
+        profileViewModel.logout.observe(viewLifecycleOwner) {
             showLoading(false)
             Toast.makeText(requireContext(), getString(R.string.logout_success), Toast.LENGTH_SHORT)
                 .show()

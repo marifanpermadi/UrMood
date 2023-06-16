@@ -7,7 +7,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.urmood.R
 import com.example.urmood.databinding.ActivityTestResultBinding
-import com.example.urmood.presentation.ui.ui.model.Contact
+import com.example.urmood.data.model.Contact
 import com.example.urmood.presentation.utils.ContactListAdapter
 
 class TestResultActivity : AppCompatActivity() {

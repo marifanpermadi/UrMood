@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.urmood.R
-import com.example.urmood.presentation.ui.ui.model.Contact
+import com.example.urmood.data.model.Contact
 
 class ContactListAdapter(
     private val listContact: ArrayList<Contact>

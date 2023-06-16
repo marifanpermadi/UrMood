@@ -13,7 +13,7 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import com.example.urmood.databinding.ActivitySplashBinding
-import com.example.urmood.presentation.ui.ui.model.UserSession
+import com.example.urmood.data.model.UserSession
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
