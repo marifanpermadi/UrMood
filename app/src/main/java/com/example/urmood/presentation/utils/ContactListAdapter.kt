@@ -1,4 +1,4 @@
-package com.example.urmood.presentation.ui.ui.model
+package com.example.urmood.presentation.utils
 
 import android.content.Intent
 import android.net.Uri
@@ -9,9 +9,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.urmood.R
+import com.example.urmood.presentation.ui.ui.model.Contact
 
 class ContactListAdapter(
-    private val listContact: ArrayList<Contact>): RecyclerView.Adapter<ContactListAdapter.ListViewHolder>() {
+    private val listContact: ArrayList<Contact>
+) : RecyclerView.Adapter<ContactListAdapter.ListViewHolder>() {
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvName: TextView = itemView.findViewById(R.id.tv_contact_name)
@@ -20,7 +22,8 @@ class ContactListAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_contact, parent, false)
+        val view: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_contact, parent, false)
         return ListViewHolder(view)
     }
 
@@ -41,5 +44,4 @@ class ContactListAdapter(
             holder.itemView.context.startActivity(intent)
         }
     }
-
 }

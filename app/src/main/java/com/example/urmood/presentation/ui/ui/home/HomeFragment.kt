@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.urmood.databinding.FragmentHomeBinding
 import com.example.urmood.presentation.ui.TestActivity
 import com.example.urmood.presentation.ui.WebviewActivity
-import com.example.urmood.presentation.ui.ui.ListArticleAdapter
+import com.example.urmood.presentation.utils.ListArticleAdapter
 import com.example.urmood.presentation.ui.ui.model.ArticleResponse
 import com.example.urmood.presentation.ui.ui.model.TipsResponse
 
@@ -41,17 +41,17 @@ class HomeFragment : Fragment() {
             ViewModelProvider(this)[HomeViewModel::class.java]
         val layoutManager = LinearLayoutManager(requireContext())
         binding.rvArticle.layoutManager = layoutManager
-        val itemDecoration = DividerItemDecoration(requireContext(),layoutManager.orientation)
+        val itemDecoration = DividerItemDecoration(requireContext(), layoutManager.orientation)
         binding.rvArticle.addItemDecoration(itemDecoration)
         binding.rvArticle.setHasFixedSize(true)
 
-        homeViewModel.isLoading.observe(viewLifecycleOwner){
+        homeViewModel.isLoading.observe(viewLifecycleOwner) {
             showLoading(it)
         }
-        homeViewModel.listArticle.observe(viewLifecycleOwner){
+        homeViewModel.listArticle.observe(viewLifecycleOwner) {
             setArticle(it)
         }
-        homeViewModel.listTips.observe(viewLifecycleOwner){
+        homeViewModel.listTips.observe(viewLifecycleOwner) {
             setTips(it)
         }
 
@@ -62,11 +62,11 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-    private fun setTips(tips : List<TipsResponse>){
+    private fun setTips(tips: List<TipsResponse>) {
         binding.tvMotivation.text = tips.first().tips
     }
 
-    private fun setArticle(article : List<ArticleResponse>){
+    private fun setArticle(article: List<ArticleResponse>) {
         val adapter = ListArticleAdapter(article)
         binding.rvArticle.adapter = adapter
         adapter.setOnItemClickCallback(object :
@@ -74,8 +74,11 @@ class HomeFragment : Fragment() {
             override fun onItemClicked(data: ArticleResponse?) {
                 val bundle = Bundle()
                 bundle.putString("link", data?.link)
-                startActivity(Intent(requireActivity(), WebviewActivity::class.java).putExtra(
-                    "link", data?.link))
+                startActivity(
+                    Intent(requireActivity(), WebviewActivity::class.java).putExtra(
+                        "link", data?.link
+                    )
+                )
             }
         })
     }

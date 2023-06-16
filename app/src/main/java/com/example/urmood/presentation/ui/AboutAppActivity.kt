@@ -2,7 +2,6 @@ package com.example.urmood.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.urmood.R
 import com.example.urmood.databinding.ActivityAboutAppBinding
 
 class AboutAppActivity : AppCompatActivity() {

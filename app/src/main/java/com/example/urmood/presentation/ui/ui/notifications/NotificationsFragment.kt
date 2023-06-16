@@ -57,7 +57,11 @@ class NotificationsFragment : Fragment() {
 
         notificationsViewModel.error.observe(viewLifecycleOwner) {
             showLoading(false)
-            Toast.makeText(requireContext(), getString(R.string.fail_fetching_user_data), Toast.LENGTH_LONG).show()
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.fail_fetching_user_data),
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 
@@ -70,7 +74,8 @@ class NotificationsFragment : Fragment() {
 
         notificationsViewModel.logout.observe(viewLifecycleOwner) {
             showLoading(false)
-            Toast.makeText(requireContext(), getString(R.string.logout_success), Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.logout_success), Toast.LENGTH_SHORT)
+                .show()
 
             val intent = Intent(requireActivity(), LoginActivity::class.java)
             startActivity(intent)

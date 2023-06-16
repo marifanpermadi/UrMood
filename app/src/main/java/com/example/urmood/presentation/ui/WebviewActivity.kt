@@ -6,7 +6,8 @@ import android.os.Bundle
 import com.example.urmood.databinding.ActivityWebviewBinding
 
 class WebviewActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityWebviewBinding
+    private lateinit var binding: ActivityWebviewBinding
+
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

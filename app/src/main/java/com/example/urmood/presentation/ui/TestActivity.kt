@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import com.example.urmood.databinding.ActivityTestBinding
 import com.example.urmood.ml.Model
 import org.tensorflow.lite.DataType
@@ -45,11 +44,9 @@ class TestActivity : AppCompatActivity() {
             val encodedOccupation = encodeOccupation(occupation)
 
             val inputBuffer = ByteBuffer.allocateDirect(1 * 68 * 4)
-
             inputBuffer.order(ByteOrder.nativeOrder())
 
             val inputArray = FloatArray(32)
-
             inputArray[0] = age
             inputArray[1 + encodedCity] = 1.0f
             if (encodedOccupation >= 0 && encodedOccupation < (inputArray.size - 13)) {
@@ -71,7 +68,6 @@ class TestActivity : AppCompatActivity() {
             }
 
             inputBuffer.asFloatBuffer().put(inputArray)
-
             inputBuffer.rewind()
 
             val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 68), DataType.FLOAT32)
@@ -79,8 +75,6 @@ class TestActivity : AppCompatActivity() {
 
             val outputs = model.process(inputFeature0)
             val outputFeature0 = outputs.outputFeature0AsTensorBuffer
-            Log.d("TestActivity", "OutputFeature: $outputFeature0")
-
 
             val probabilities = outputFeature0.floatArray
             val maxIndex = probabilities.indices.maxByOrNull { probabilities[it] } ?: -1
@@ -101,7 +95,6 @@ class TestActivity : AppCompatActivity() {
                 intent.putExtra("predictedStressLevel", predictedStressLevel)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 startActivity(intent)
-
                 finish()
             }, delayTime)
         }

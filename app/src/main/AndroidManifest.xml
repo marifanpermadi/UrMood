@@ -15,13 +15,19 @@
         tools:targetApi="31">
         <activity
             android:name=".presentation.ui.LoadingActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".presentation.ui.TestResultActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".presentation.ui.WebviewActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".presentation.ui.TestActivity"
             android:exported="false"
@@ -30,10 +36,14 @@
         <activity
             android:name=".presentation.ui.HomeActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
             android:label="@string/title_activity_home" />
         <activity
             android:name=".presentation.ui.SplashActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -60,9 +70,6 @@
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".presentation.ui.MainActivity"
-            android:exported="false" />
     </application>
 
 </manifest>

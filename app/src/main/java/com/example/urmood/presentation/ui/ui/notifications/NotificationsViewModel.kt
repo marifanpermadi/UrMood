@@ -21,7 +21,7 @@ class NotificationsViewModel : ViewModel() {
     val error: LiveData<String> = _error
 
     private val _logout = MutableLiveData<LogoutResponse>()
-    val logout : LiveData<LogoutResponse> = _logout
+    val logout: LiveData<LogoutResponse> = _logout
 
     fun getUserData(email: String) {
         val client = ApiConfig.getApiService().getUserData(email)
