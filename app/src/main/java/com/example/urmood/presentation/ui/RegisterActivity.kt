@@ -70,7 +70,11 @@ class RegisterActivity : AppCompatActivity() {
 
             viewModel.error.observe(this@RegisterActivity) {
                 showLoading(false)
-                Toast.makeText(this@RegisterActivity, getString(R.string.register_fail), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@RegisterActivity,
+                    getString(R.string.register_fail),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }

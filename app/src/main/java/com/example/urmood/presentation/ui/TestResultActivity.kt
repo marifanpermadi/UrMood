@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.urmood.R
 import com.example.urmood.databinding.ActivityTestResultBinding
 import com.example.urmood.presentation.ui.ui.model.Contact
-import com.example.urmood.presentation.ui.ui.model.ContactListAdapter
+import com.example.urmood.presentation.utils.ContactListAdapter
 
 class TestResultActivity : AppCompatActivity() {
 
@@ -68,7 +68,8 @@ class TestResultActivity : AppCompatActivity() {
         val listContact = ArrayList<Contact>()
 
         for (i in dataName.indices) {
-            val contact = Contact(dataName[i], dataPhoto.getResourceId(i, -1), dataNumber[i], dataDesc[i])
+            val contact =
+                Contact(dataName[i], dataPhoto.getResourceId(i, -1), dataNumber[i], dataDesc[i])
             listContact.add(contact)
         }
         return listContact

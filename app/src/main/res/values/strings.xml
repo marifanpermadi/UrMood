@@ -33,23 +33,14 @@
     <string name="about_app">About App</string>
     <string name="line_logo">Line logo</string>
     <string name="welcome_image">Welcome image</string>
-    <string name="continued">Continue</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="history">History</string>
     <string name="profile">Profile</string>
     <string name="been_overwhelmed">Been overwhelmed and stressed out lately?</string>
     <string name="urmood_is_here">UrMood is here to help you find your inner calm.</string>
     <string name="test_now">Test Now</string>
-    <string name="sorry">Sorry, there is no checking history yet</string>
     <string name="background">Background</string>
-    <string name="_1">1</string>
-    <string name="_2">2</string>
-    <string name="_3">3</string>
-    <string name="_4">4</string>
-    <string name="_0">0</string>
     <string name="_0_4">0 – 4</string>
     <string name="how_old">How old are you?</string>
     <string name="what_city">What city do you live in?</string>
@@ -70,8 +61,6 @@
     <string name="daily_motivation">DAILY MOTIVATION</string>
     <string name="eat_much_so_not_easy_stress">Eat much so not easy stress…</string>
     <string name="mental_health_article">Get insight from articles below</string>
-    <string name="fail_fetching_article">Failed to fetch article</string>
-    <string name="fail_fetching_tips">Failed to fetch tips</string>
     <string name="about_app_description">urMood is an innovative app that combines the power of machine learning, expert articles, practical tips, and engaging events to help you assess, improve, and maintain your mental health. With its user-friendly interface and personalized approach, urMood empowers individuals to take control of their well-being and thrive in today\'s fast-paced world.
 With urMood, you have a comprehensive mental health companion that leverages machine learning, expert knowledge, and community support to empower you on your journey to improved mental well-being. Take control of your mental health, access valuable resources, and discover a community that understands and supports you every step of the way.</string>
     <string name="result">Result</string>

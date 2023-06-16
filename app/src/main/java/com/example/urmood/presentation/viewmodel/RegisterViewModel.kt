@@ -9,7 +9,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RegisterViewModel: ViewModel() {
+class RegisterViewModel : ViewModel() {
 
     private val _register = MutableLiveData<RegisterModel>()
     val register: LiveData<RegisterModel> = _register

@@ -7,8 +7,8 @@ import retrofit2.http.GET
 
 interface ApiServiceArticle {
     @GET("article")
-    fun getAllArticle() : Call<List<ArticleResponse>>
+    fun getAllArticle(): Call<List<ArticleResponse>>
 
     @GET("alltips")
-    fun getAllTips() : Call<List<TipsResponse>>
+    fun getAllTips(): Call<List<TipsResponse>>
 }

@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btRegister.setOnClickListener {
-            val intent = Intent(this@LoginActivity,RegisterActivity::class.java)
+            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -71,7 +71,11 @@ class LoginActivity : AppCompatActivity() {
 
             viewModel.error.observe(this@LoginActivity) {
                 showLoading(false)
-                Toast.makeText(this@LoginActivity, getString(R.string.login_fail), Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this@LoginActivity,
+                    getString(R.string.login_fail),
+                    Toast.LENGTH_LONG
+                ).show()
             }
         }
     }
